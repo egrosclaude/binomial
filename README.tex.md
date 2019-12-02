@@ -28,9 +28,9 @@ que son independientes, y por lo tanto su probabilidad es el producto de las $P_
 compuesto "transmite $U_1$ y los demás no, o transmite $U_2$ y los demás no, o transmite $U_3$ y los demás no...".
 Como esos eventos elementales son disjuntos, su probabilidad es la suma de las probabilidades individuales.
 - P(esté transmitiendo un usuario cualquiera de entre los $N$, y los demás no) =  
-$P(U_1 \bigcap \overline U_2 \bigcap \overline U_3 \bigcap \ldots)  +  
-P(\overline U_1 \bigcap U_2 \bigcap \overline U_3 \bigcap \ldots)  +  
-P(\overline U_1 \bigcap \overline U_2 \bigcap U_3 \bigcap \ldots)  + \ldots
+$P(U_1 \cap \overline U_2 \cap \overline U_3 \cap \ldots)  +  
+P(\overline U_1 \cap U_2 \cap \overline U_3 \cap \ldots)  +  
+P(\overline U_1 \cap \overline U_2 \cap U_3 \cap \ldots)  + \ldots
 = N \times p \times (1-p) ^ (N-1)$.
 - En el caso anterior, existen exactamente N maneras de elegir el usuario que esté transmitiendo, 
 lo que se refleja en el coeficiente N de las probabilidades. Para analizar el caso donde transmiten $k < N$ usuarios Ui,
