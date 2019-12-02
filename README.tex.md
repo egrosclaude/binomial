@@ -21,14 +21,15 @@ El planteo es como sigue:
 de tiempo $t$ nos dice que la probabilidad de transmitir es $P = \frac{f \times d}{t}$. 
 - Llamemos $U1$ al usuario que transmite en un momento dado. Llamemos $p(U1\ esté\ transmitiendo) = p(U1) = P$. Ésta es la 
 probabilidad de éxito en un ensayo de Bernoulli de probabilidad $P$.
-- La probabilidad de que cualquier $U_i$ no transmita en el mismo instante es $p(\not\sim Ui) = 1-P$.  
-- El evento "está transmitiendo U1 y los demás no" es la conjunción de los eventos {U1, ~U2, ~U3, ...} 
-que son independientes, y por lo tanto su P es el producto de las Pi. 
-- El evento "está transmitiendo un usuario cualquiera de entre los N, y los demás no" equivale al evento 
-compuesto "transmite U1 y los demás no, o transmite U2 y los demás no, o transmite U3 y los demás no...".
+- La probabilidad de que cualquier $U_i$ no transmita en el mismo instante es $p(\overline U_i) = 1-P$.  
+- El evento "está transmitiendo $U_1$ y los demás no" es la conjunción de los eventos ${U_1, \overline U_2, \overline U_3, ...}$, 
+que son independientes, y por lo tanto su probabilidad es el producto de las $P_i$. 
+- El evento "está transmitiendo un usuario cualquiera de entre los $N$, y los demás no" equivale al evento 
+compuesto "transmite $U_1$ y los demás no, o transmite $U_2$ y los demás no, o transmite $U_3$ y los demás no...".
 Como esos eventos elementales son disjuntos, su probabilidad es la suma de las probabilidades individuales.
-- P(esté transmitiendo un usuario cualquiera de entre los N, y los demás no) =  P(U1 ^ ~U2 ^ ~U3 ^ ...)  
-+  P(~U1 ^ U2 ^ ~U3 ^ ...)  +  P(~U1 ^ ~U2 ^ U3 ^ ...)  +... = N * p * (1-p) ^ (N-1).
+- P(esté transmitiendo un usuario cualquiera de entre los $N$, y los demás no) =  $P(U_1 ^\overline U_2 ^ \overline U_3 ^ ...)  
++  P(\overline U_1 ^ U_2 ^ \overline U_3 ^ ...)  +  P(\overline U_1 ^ \overline U_2 ^ U_3 ^ ...)  +... 
+= N \times p \times (1-p) ^ (N-1)$.
 - En el caso anterior, existen exactamente N maneras de elegir el usuario que esté transmitiendo, 
 lo que se refleja en el coeficiente N de las probabilidades. Para analizar el caso donde transmiten $k < N$ usuarios Ui,
 hay muchas maneras de enumerar o elegir esos k usuarios, 
