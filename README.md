@@ -34,12 +34,12 @@ Como esos eventos elementales son disjuntos, su probabilidad es la suma de las p
 - En el caso anterior, existen exactamente <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/> maneras de elegir el usuario que esté transmitiendo, 
 lo que se refleja en el coeficiente <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/> de las probabilidades. Para analizar el caso donde transmiten <img src="/tex/103b826757951fc3932be9bf36ebca34.svg?invert_in_darkmode&sanitize=true" align=middle width=45.99298274999999pt height=22.831056599999986pt/> usuarios <img src="/tex/8ea38e2adf995ba3a8661a5d13c17526.svg?invert_in_darkmode&sanitize=true" align=middle width=15.874636799999989pt height=22.465723500000017pt/>,
 hay muchas maneras de enumerar o elegir esos <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/> usuarios, 
-y el factor que afecta a las probabilidades se expresa en forma de número combinatorio <img src="/tex/1126a8884ff3dc620613ea933950dac7.svg?invert_in_darkmode&sanitize=true" align=middle width=71.95597529999998pt height=22.831056599999986pt/>:
+y el factor que afecta a las probabilidades se expresa en forma de número combinatorio <img src="/tex/1a83719198e6a9265e8a51672a3dbfb0.svg?invert_in_darkmode&sanitize=true" align=middle width=26.71471109999999pt height=30.314440200000025pt/>:
     - Hay $N!$ permutaciones o maneras de numerar los N usuarios. 
     - De éstas, hay $k!$ maneras, redundantes, de numerar o elegir los k usuarios que transmiten.
     - Por cada una de éstas, existen $(N - k)!$ maneras, redundantes, de numerar los restantes. 
-    - La cantidad de combinaciones es $N! / [k! * (N - k)!] = {N choose k}$. Luego $P(k\ U_i\ transmitan\ 
-y\ el\ resto\ no) = <img src="/tex/3965a3614b62b53a81384d56dbc3d2a7.svg?invert_in_darkmode&sanitize=true" align=middle width=197.9169456pt height=27.91243950000002pt/>.
+    - La cantidad de combinaciones es $N! / [k! * (N - k)!] = {N \choose k}$. Luego $P(k\ U_i\ transmitan\ 
+y\ el\ resto\ no) = <img src="/tex/1aaa6e10f03fbe0cf6288e95f2ea8c43.svg?invert_in_darkmode&sanitize=true" align=middle width=152.67574739999998pt height=30.314440200000025pt/>.
 - <img src="/tex/42074996a1179fc8035a4fc1b29c4509.svg?invert_in_darkmode&sanitize=true" align=middle width=468.92586839999996pt height=24.65753399999998pt/> donde <img src="/tex/b8bc815b5e9d5177af01fd4d3d3c2f10.svg?invert_in_darkmode&sanitize=true" align=middle width=12.85392569999999pt height=22.465723500000017pt/> es la función de distribución 
 o función de probabilidad acumulada usando el cómputo anterior de exactamente <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/> usuarios.
 
