@@ -27,8 +27,10 @@ que son independientes, y por lo tanto su probabilidad es el producto de las $P_
 - El evento "está transmitiendo un usuario cualquiera de entre los $N$, y los demás no" equivale al evento 
 compuesto "transmite $U_1$ y los demás no, o transmite $U_2$ y los demás no, o transmite $U_3$ y los demás no...".
 Como esos eventos elementales son disjuntos, su probabilidad es la suma de las probabilidades individuales.
-- P(esté transmitiendo un usuario cualquiera de entre los $N$, y los demás no) =  $P(U_1 ^\overline U_2 ^ \overline U_3 ^ ...)  
-+  P(\overline U_1 ^ U_2 ^ \overline U_3 ^ ...)  +  P(\overline U_1 ^ \overline U_2 ^ U_3 ^ ...)  +... 
+- P(esté transmitiendo un usuario cualquiera de entre los $N$, y los demás no) =  
+$P(U_1 \bigcap \overline U_2 \bigcap \overline U_3 \bigcap \ldots)  +  
+P(\overline U_1 \bigcap U_2 \bigcap \overline U_3 \bigcap \ldots)  +  
+P(\overline U_1 \bigcap \overline U_2 \bigcap U_3 \bigcap \ldots)  + \ldots
 = N \times p \times (1-p) ^ (N-1)$.
 - En el caso anterior, existen exactamente N maneras de elegir el usuario que esté transmitiendo, 
 lo que se refleja en el coeficiente N de las probabilidades. Para analizar el caso donde transmiten $k < N$ usuarios Ui,
