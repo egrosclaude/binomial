@@ -59,63 +59,63 @@ de "no más de k sesiones simultáneas" y la probabilidad de lo contrario ("más
 sesiones simultáneas"), para varios valores de k. Esto nos permitirá analizar los puntos de corte para determinar
 las modalidades de licencia convenientes.
 
-| k | P(no más de k) | P(más de k) |
-| 0	|.005153775207	|.994846224793|
-| 1	|.033785859692	|.966214140308|
-| 2	|.111728756344	|.888271243656|
-| 3	|.250293905948	|.749706094052|
-| 4	|.431198406817	|.568801593183|
-| 5	|.616123007710	|.383876992290|
-| 6	|.770226841775	|.229773158225|
-| 7	|.877854916367	|.122145083633|
-| 8	|.942132794247	|.057867205753|
-| 9	|.975462064259	|.024537935741|
-| 10	| .990645398375	|.009354601625|
-| 11	| .996780078826	|.003219921174|
-| 12	|.998995380100	|.001004619900|
-|13	|.998995380100	|.001004619900
-|14	|.998995380100	|.001004619900
+     k  P(no más de k)  P(más de k) 
+     0	.005153775207	.994846224793
+     1	.033785859692	.966214140308
+     2	.111728756344	.888271243656
+     3	.250293905948	.749706094052
+     4	.431198406817	.568801593183
+     5	.616123007710	.383876992290
+     6	.770226841775	.229773158225
+     7	.877854916367	.122145083633
+     8	.942132794247	.057867205753
+     9	.975462064259	.024537935741
+     10	 .990645398375	.009354601625
+     11	 .996780078826	.003219921174
+     12	.998995380100	.001004619900
+    13	.998995380100	.001004619900
+    14	.998995380100	.001004619900
 
 ## Script
 Se adjunta el script en bc (la calculadora de Unix) que produce la tabla anterior. Modificando el "scale" se obtiene mayor precisión. Con scale=12, para 10 o 12 sesiones ya prácticamente no hay diferencia apreciable.
 
-#!/usr/bin/bc -q
-scale=12
-define fact(x)
-{
-         if(x <= 1)
-                 return 1;
-         return x * fact(x-1);
-}
-#fact(3)
-#fact(5)
-#fact(13)
-define comb(n,k)
-{
-         return fact(n) / (fact(k) * fact(n-k));
-}
-#comb(5,1)
-#comb(5,2)
-#comb(13,7)
-define fprob(n,k,p)
-{
-         return comb(n,k) * (p ^ k) * ((1-p) ^ (n-k));
-}
-define fdistrib(n,k,p)
-{
-        suma = 0;
-         for(i=0; i<=k; i++) {
-                 suma += fprob(n,i,p);
-         }
-         return suma;
-}
-
-print "k, prob de <= k usuarios, prob de > k usuarios trabajando a la vez\n"
-
-for(j=0; j<15; j++) {
-       f = fdistrib(50,j,0.1)
-       print j,"\t",f,"\t",1-f,"\n"
-}
-
-quit
-
+    #!/usr/bin/bc -q
+    scale=12
+    define fact(x)
+    {
+             if(x <= 1)
+                     return 1;
+             return x * fact(x-1);
+    }
+    #fact(3)
+    #fact(5)
+    #fact(13)
+    define comb(n,k)
+    {
+             return fact(n) / (fact(k) * fact(n-k));
+    }
+    #comb(5,1)
+    #comb(5,2)
+    #comb(13,7)
+    define fprob(n,k,p)
+    {
+             return comb(n,k) * (p ^ k) * ((1-p) ^ (n-k));
+    }
+    define fdistrib(n,k,p)
+    {
+            suma = 0;
+             for(i=0; i<=k; i++) {
+                     suma += fprob(n,i,p);
+             }
+             return suma;
+    }
+    
+    print "k, prob de <= k usuarios, prob de > k usuarios trabajando a la vez\n"
+    
+    for(j=0; j<15; j++) {
+           f = fdistrib(50,j,0.1)
+           print j,"\t",f,"\t",1-f,"\n"
+    }
+    
+    quit
+    
