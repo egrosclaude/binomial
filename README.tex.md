@@ -17,8 +17,8 @@ y con esos datos determinar la probabilidad de transmitir en un momento dado.
 El planteo es como sigue:
 
 
-- La frecuencia f y la duración d promedio de las ráfagas de actividad de un usuario a lo largo de un espacio
-de tiempo t nos dice que la probabilidad de transmitir es $P = f * d/t$. 
+- La frecuencia $f$ y la duración $d$ promedio de las ráfagas de actividad de un usuario a lo largo de un espacio
+de tiempo $t$ nos dice que la probabilidad de transmitir es $P = \frac{f \times d}{t}$. 
 - Llamemos U1 al usuario que transmite en un momento dado. Llamemos $p(U1 esté transmitiendo) = p(U1) = P$. Ésta es la 
 probabilidad de éxito en un ensayo de Bernoulli de probabilidad $P$.
 - La probabilidad de que cualquier Ui no transmita en el mismo instante es $p(~Ui) = 1-P$.  
