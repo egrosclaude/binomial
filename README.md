@@ -27,19 +27,19 @@ que son independientes, y por lo tanto su probabilidad es el producto de las <im
 - El evento "está transmitiendo un usuario cualquiera de entre los <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/>, y los demás no" equivale al evento 
 compuesto "transmite <img src="/tex/640168e471c7afd3936ed1814b93f944.svg?invert_in_darkmode&sanitize=true" align=middle width=17.77628489999999pt height=22.465723500000017pt/> y los demás no, o transmite <img src="/tex/41c93ab7eaf30f73f32d515ad3fcc5f6.svg?invert_in_darkmode&sanitize=true" align=middle width=17.77628489999999pt height=22.465723500000017pt/> y los demás no, o transmite <img src="/tex/af9019f066d0c0eab52e85cf40381a6b.svg?invert_in_darkmode&sanitize=true" align=middle width=17.77628489999999pt height=22.465723500000017pt/> y los demás no...".
 Como esos eventos elementales son disjuntos, su probabilidad es la suma de las probabilidades individuales.
-- P(esté transmitiendo un usuario cualquiera de entre los <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/>, y los demás no) =  
-<img src="/tex/f70d6b028c44cd0c540448d9713d40b0.svg?invert_in_darkmode&sanitize=true" align=middle width=667.39743015pt height=29.190975000000005pt/>.
-- En el caso anterior, existen exactamente N maneras de elegir el usuario que esté transmitiendo, 
-lo que se refleja en el coeficiente N de las probabilidades. Para analizar el caso donde transmiten <img src="/tex/103b826757951fc3932be9bf36ebca34.svg?invert_in_darkmode&sanitize=true" align=middle width=45.99298274999999pt height=22.831056599999986pt/> usuarios Ui,
-hay muchas maneras de enumerar o elegir esos k usuarios, 
-y el factor que afecta a las probabilidades se expresa en forma de número combinatorio C(N k):
+- P(esté transmitiendo un usuario cualquiera de entre los <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/>, y los demás no):
+<p align="center"><img src="/tex/820fbb941ae6e79ce3c3284c8816ac02.svg?invert_in_darkmode&sanitize=true" align=middle width=700.27413885pt height=37.69845585pt/></p> 
+- En el caso anterior, existen exactamente <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/> maneras de elegir el usuario que esté transmitiendo, 
+lo que se refleja en el coeficiente <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/> de las probabilidades. Para analizar el caso donde transmiten <img src="/tex/103b826757951fc3932be9bf36ebca34.svg?invert_in_darkmode&sanitize=true" align=middle width=45.99298274999999pt height=22.831056599999986pt/> usuarios <img src="/tex/8ea38e2adf995ba3a8661a5d13c17526.svg?invert_in_darkmode&sanitize=true" align=middle width=15.874636799999989pt height=22.465723500000017pt/>,
+hay muchas maneras de enumerar o elegir esos <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/> usuarios, 
+y el factor que afecta a las probabilidades se expresa en forma de número combinatorio <img src="/tex/1126a8884ff3dc620613ea933950dac7.svg?invert_in_darkmode&sanitize=true" align=middle width=71.95597529999998pt height=22.831056599999986pt/>:
     - Hay $N!$ permutaciones o maneras de numerar los N usuarios. 
     - De éstas, hay $k!$ maneras, redundantes, de numerar o elegir los k usuarios que transmiten.
     - Por cada una de éstas, existen $(N - k)!$ maneras, redundantes, de numerar los restantes. 
-    - La cantidad de combinaciones es $N! / [k! * (N - k)!] = C(N k)$. Luego P(k Ui transmitan 
-y el resto no) = <img src="/tex/ce24397c71e237c00dae476b27ea5fa9.svg?invert_in_darkmode&sanitize=true" align=middle width=203.0784162pt height=29.190975000000005pt/>.
-- - P(más de k usuarios) = 1 - P(k o menos usuarios) = 1 - F(k) donde F es la función de distribución 
-o función de probabilidad acumulada usando el cómputo anterior de exactamente k usuarios.
+    - La cantidad de combinaciones es $N! / [k! * (N - k)!] = {N choose k}$. Luego $P(k\ U_i\ transmitan\ 
+y\ el\ resto\ no) = <img src="/tex/3965a3614b62b53a81384d56dbc3d2a7.svg?invert_in_darkmode&sanitize=true" align=middle width=197.9169456pt height=27.91243950000002pt/>.
+- <img src="/tex/42074996a1179fc8035a4fc1b29c4509.svg?invert_in_darkmode&sanitize=true" align=middle width=468.92586839999996pt height=24.65753399999998pt/> donde <img src="/tex/b8bc815b5e9d5177af01fd4d3d3c2f10.svg?invert_in_darkmode&sanitize=true" align=middle width=12.85392569999999pt height=22.465723500000017pt/> es la función de distribución 
+o función de probabilidad acumulada usando el cómputo anterior de exactamente <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/> usuarios.
 
 ## Ejemplo
 Supongamos un universo de 50 usuarios donde cada uno está 10% del tiempo usando la aplicación. Investiguemos qué pasará 
