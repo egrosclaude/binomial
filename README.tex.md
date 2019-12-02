@@ -19,9 +19,9 @@ El planteo es como sigue:
 
 - La frecuencia $f$ y la duración $d$ promedio de las ráfagas de actividad de un usuario a lo largo de un espacio
 de tiempo $t$ nos dice que la probabilidad de transmitir es $P = \frac{f \times d}{t}$. 
-- Llamemos U1 al usuario que transmite en un momento dado. Llamemos $p(U1 esté transmitiendo) = p(U1) = P$. Ésta es la 
+- Llamemos $U1$ al usuario que transmite en un momento dado. Llamemos $p(U1\ esté\ transmitiendo) = p(U1) = P$. Ésta es la 
 probabilidad de éxito en un ensayo de Bernoulli de probabilidad $P$.
-- La probabilidad de que cualquier Ui no transmita en el mismo instante es $p(~Ui) = 1-P$.  
+- La probabilidad de que cualquier $U_i$ no transmita en el mismo instante es $p(\not{Ui}) = 1-P$.  
 - El evento "está transmitiendo U1 y los demás no" es la conjunción de los eventos {U1, ~U2, ~U3, ...} 
 que son independientes, y por lo tanto su P es el producto de las Pi. 
 - El evento "está transmitiendo un usuario cualquiera de entre los N, y los demás no" equivale al evento 
