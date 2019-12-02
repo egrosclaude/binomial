@@ -28,54 +28,94 @@ que son independientes, y por lo tanto su P es el producto de las Pi.
 compuesto "transmite U1 y los demás no, o transmite U2 y los demás no, o transmite U3 y los demás no...".
 Como esos eventos elementales son disjuntos, su probabilidad es la suma de las probabilidades individuales.
 - P(esté transmitiendo un usuario cualquiera de entre los N, y los demás no) =  P(U1 ^ ~U2 ^ ~U3 ^ ...)  
-+  P(~U1 ^ U2 ^ ~U3 ^ ...)  +  P(~U1 ^ ~U2 ^ U3 ^ ...)  +... = N * p * (1-p) ^ (N-1)
++  P(~U1 ^ U2 ^ ~U3 ^ ...)  +  P(~U1 ^ ~U2 ^ U3 ^ ...)  +... = N * p * (1-p) ^ (N-1).
 - En el caso anterior, existen exactamente N maneras de elegir el usuario que esté transmitiendo, 
 lo que se refleja en el coeficiente N de las probabilidades. Para analizar el caso donde transmiten <img src="/tex/103b826757951fc3932be9bf36ebca34.svg?invert_in_darkmode&sanitize=true" align=middle width=45.99298274999999pt height=22.831056599999986pt/> usuarios Ui,
 hay muchas maneras de enumerar o elegir esos k usuarios, 
-y el factor que afecta a las probabilidades se expresa en forma de número combinatorio. 
+y el factor que afecta a las probabilidades se expresa en forma de número combinatorio C(N k):
     - Hay $N!$ permutaciones o maneras de numerar los N usuarios. 
     - De éstas, hay $k!$ maneras, redundantes, de numerar o elegir los k usuarios que transmiten.
-    - Po cada una de éstas, existen $(N - k)!$ maneras, redundantes, de numerar los restantes. 
-    - La cantidad de combinaciones es $N! / [k! * (N - k)!] = (N k)$. Luego P(k Ui transmitan 
-y el resto no) = <img src="/tex/6b2115bc86d2735014af6b7e3cdfaa7a.svg?invert_in_darkmode&sanitize=true" align=middle width=190.15377809999998pt height=29.190975000000005pt/>.
-
+    - Por cada una de éstas, existen $(N - k)!$ maneras, redundantes, de numerar los restantes. 
+    - La cantidad de combinaciones es $N! / [k! * (N - k)!] = C(N k)$. Luego P(k Ui transmitan 
+y el resto no) = <img src="/tex/ce24397c71e237c00dae476b27ea5fa9.svg?invert_in_darkmode&sanitize=true" align=middle width=203.0784162pt height=29.190975000000005pt/>.
+- - P(más de k usuarios) = 1 - P(k o menos usuarios) = 1 - F(k) donde F es la función de distribución 
+o función de probabilidad acumulada usando el cómputo anterior de exactamente k usuarios.
 
 ## Ejemplo
-Supongamos que cada usuario está 10% del tiempo usando la aplicación. Investiguemos qué pasará con 10 usuarios.
+Supongamos un universo de 50 usuarios donde cada uno está 10% del tiempo usando la aplicación. Investiguemos qué pasará 
+con una cota de 10 usuarios.
 - U1 transmite 10% del tiempo implica p(U1 esté transmitiendo) = p(U1) = P = 0.1. 
 - Probabilidad de que cualquier Ui no transmita en el mismo instante es p(~Ui) = 1-P = 0.9.
 - P(U1 ^ ~U2 ^ ~U3 ^ ...) = P * (1-P) * (1-P) * ... = P * (1-P)^(N-1) = 0.1 * 0.9^49 = .00057264
 - P(esté transmitiendo un usuario cualquiera y los demás no) = P(U1 ^ ~U2 ^ ~U3 ^ ...)  +  P(~U1 ^ U2 ^ ~U3 ^ ...)  
 +  P(~U1 ^ ~U2 ^ U3 ^ ...)  +... = N * P * (1-P) ^ (N-1) = 50 * 0.1 * 0.9 ^ 49 =  .02863205
-- P(10 Ui transmitan y el resto no) = (Nps k) * p^k * (1-p)^(Nps-k) = (50 10) * 0.1 ^ 10 * 0.9 ^ 49 =  
+- P(10 Ui transmitan y el resto no) = (N k) * p^k * (1-p)^(N-k) = C(50 10) * 0.1^10 * 0.9^49 =  
 10272278170 * .000000000000572 = .005875743113240
-- P(más de 10 usuarios) = 1 - P(10 o menos usuarios) = 1 - F(10) donde F es la función de distribución 
-o función de probabilidad acumulada usando el cómputo anterior de exactamente k usuarios. F(10) =  .99064539, 
+- P(más de 10 usuarios) = 1 - P(10 o menos usuarios) = 1 - F(10). F(10) =  .99064539, 
 luego P(más de 10 usuarios) = .00935460
-- Ofrecer la licencia se parece a ofrecer la garantía de una batería, querés saber cuánto va a aguantar antes 
-de romperse y entonces fijás la garantia en un picosegundo antes de que se rompa. Similarmente acá te interesa 
-saber cuántos vas a tener laburando simultáneamente para que les quede chico el contrato lo antes posible y 
-ofrecerles el segmento de licencia adecuado que vale cinco veces más que el anterior. Acá la tablita para 50 
-usuarios, con las probabilidades de "no más de k sesiones simultáneas" y la prob de lo contrario ("más de k 
-sesiones simultáneas"). Siempre suponiendo que c/u trabaja en promedio un 10% del tiempo. Como ves, más de 10 
-chabones no hay casi nunca.
 
+Preparemos una tabla para esta aplicación hipotética donde hay 50 usuarios, con las probabilidades 
+de "no más de k sesiones simultáneas" y la probabilidad de lo contrario ("más de k 
+sesiones simultáneas"), para varios valores de k. Esto nos permitirá analizar los puntos de corte para determinar
+las modalidades de licencia convenientes.
+
+| k | P(no más de k) | P(más de k) |
+| 0	|.005153775207	|.994846224793|
+| 1	|.033785859692	|.966214140308|
+| 2	|.111728756344	|.888271243656|
+| 3	|.250293905948	|.749706094052|
+| 4	|.431198406817	|.568801593183|
+| 5	|.616123007710	|.383876992290|
+| 6	|.770226841775	|.229773158225|
+| 7	|.877854916367	|.122145083633|
+| 8	|.942132794247	|.057867205753|
+| 9	|.975462064259	|.024537935741|
+| 10	| .990645398375	|.009354601625|
+| 11	| .996780078826	|.003219921174|
+| 12	|.998995380100	|.001004619900|
+|13	|.998995380100	|.001004619900
+|14	|.998995380100	|.001004619900
 
 ## Script
-Se adjunta el script en bc (la calculadorita de Unix) para toquetear a piacere una vez que sepas la tasa de uso. Modificando el "scale" se obtiene más precisión, acá con scale=12 para 10 o 12 sesiones ya prácticamente no hay diferencia.
-0	.005153775207	.994846224793
-1	.033785859692	.966214140308
-2	.111728756344	.888271243656
-3	.250293905948	.749706094052
-4	.431198406817	.568801593183
-5	.616123007710	.383876992290
-6	.770226841775	.229773158225
-7	.877854916367	.122145083633
-8	.942132794247	.057867205753
-9	.975462064259	.024537935741
-10	.990645398375	.009354601625
-11	.996780078826	.003219921174
-12	.998995380100	.001004619900
-13	.998995380100	.001004619900
-14	.998995380100	.001004619900
+Se adjunta el script en bc (la calculadora de Unix) que produce la tabla anterior. Modificando el "scale" se obtiene mayor precisión. Con scale=12, para 10 o 12 sesiones ya prácticamente no hay diferencia apreciable.
+
+#!/usr/bin/bc -q
+scale=12
+define fact(x)
+{
+         if(x <= 1)
+                 return 1;
+         return x * fact(x-1);
+}
+#fact(3)
+#fact(5)
+#fact(13)
+define comb(n,k)
+{
+         return fact(n) / (fact(k) * fact(n-k));
+}
+#comb(5,1)
+#comb(5,2)
+#comb(13,7)
+define fprob(n,k,p)
+{
+         return comb(n,k) * (p ^ k) * ((1-p) ^ (n-k));
+}
+define fdistrib(n,k,p)
+{
+        suma = 0;
+         for(i=0; i<=k; i++) {
+                 suma += fprob(n,i,p);
+         }
+         return suma;
+}
+
+print "k, prob de <= k usuarios, prob de > k usuarios trabajando a la vez\n"
+
+for(j=0; j<15; j++) {
+       f = fdistrib(50,j,0.1)
+       print j,"\t",f,"\t",1-f,"\n"
+}
+
+quit
 
