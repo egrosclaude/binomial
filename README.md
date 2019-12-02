@@ -17,8 +17,8 @@ y con esos datos determinar la probabilidad de transmitir en un momento dado.
 El planteo es como sigue:
 
 
-- La frecuencia f y la duración d promedio de las ráfagas de actividad de un usuario a lo largo de un espacio
-de tiempo t nos dice que la probabilidad de transmitir es <img src="/tex/426a016d185b9625aee16e564d70a72b.svg?invert_in_darkmode&sanitize=true" align=middle width=82.80805335pt height=24.65753399999998pt/>. 
+- La frecuencia <img src="/tex/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode&sanitize=true" align=middle width=9.81741584999999pt height=22.831056599999986pt/> y la duración <img src="/tex/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55596444999999pt height=22.831056599999986pt/> promedio de las ráfagas de actividad de un usuario a lo largo de un espacio
+de tiempo <img src="/tex/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width=5.936097749999991pt height=20.221802699999984pt/> nos dice que la probabilidad de transmitir es <img src="/tex/102385201bf065a922b14dca0418eb9a.svg?invert_in_darkmode&sanitize=true" align=middle width=61.54396379999998pt height=30.648287999999997pt/>. 
 - Llamemos U1 al usuario que transmite en un momento dado. Llamemos <img src="/tex/f0cc4ba9e979b56a309c7d07acfb5c66.svg?invert_in_darkmode&sanitize=true" align=middle width=276.0154254pt height=24.65753399999998pt/>. Ésta es la 
 probabilidad de éxito en un ensayo de Bernoulli de probabilidad <img src="/tex/df5a289587a2f0247a5b97c1e8ac58ca.svg?invert_in_darkmode&sanitize=true" align=middle width=12.83677559999999pt height=22.465723500000017pt/>.
 - La probabilidad de que cualquier Ui no transmita en el mismo instante es <img src="/tex/be39e9c6368b0601cfd26678b9365bf0.svg?invert_in_darkmode&sanitize=true" align=middle width=108.27941519999999pt height=24.65753399999998pt/>.  
