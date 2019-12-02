@@ -39,9 +39,7 @@ y el factor que afecta a las probabilidades se expresa en forma de número combi
     - De éstas, hay $k!$ maneras, redundantes, de numerar o elegir los k usuarios que transmiten.
     - Por cada una de éstas, existen $(N - k)!$ maneras, redundantes, de numerar los restantes. 
     - La cantidad de combinaciones es $N! / [k! * (N - k)!] = {N \choose k}$. Luego $P(k\ U_i\ transmitan\ 
-y\ el\ resto\ no) = <img src="/tex/1aaa6e10f03fbe0cf6288e95f2ea8c43.svg?invert_in_darkmode&sanitize=true" align=middle width=152.67574739999998pt height=30.314440200000025pt/>.
-- <img src="/tex/42074996a1179fc8035a4fc1b29c4509.svg?invert_in_darkmode&sanitize=true" align=middle width=468.92586839999996pt height=24.65753399999998pt/> donde <img src="/tex/b8bc815b5e9d5177af01fd4d3d3c2f10.svg?invert_in_darkmode&sanitize=true" align=middle width=12.85392569999999pt height=22.465723500000017pt/> es la función de distribución 
-o función de probabilidad acumulada usando el cómputo anterior de exactamente <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/> usuarios.
+y\ el\ resto\ no) = {N \choose k} * p^k * (1-p)^{N-k}<img src="/tex/45a4a9d6daf194b94ca15af10ce0f08e.svg?invert_in_darkmode&sanitize=true" align=middle width=17.35165739999999pt height=19.1781018pt/>P(más\ de\ k\ usuarios) = 1 - P(k\ o\ menos\ usuarios) = 1 - F(k)<img src="/tex/909b0796af6ff8ab673c1753647fb3ed.svg?invert_in_darkmode&sanitize=true" align=middle width=42.600991949999994pt height=22.831056599999986pt/>F<img src="/tex/b8eef356f2ab474a0f5c31693c3ec1bf.svg?invert_in_darkmode&sanitize=true" align=middle width=743.9712555pt height=22.831056599999986pt/>k$ usuarios.
 
 ## Ejemplo
 Supongamos un universo de 50 usuarios donde cada uno está 10% del tiempo usando la aplicación. Investiguemos qué pasará 
