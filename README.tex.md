@@ -27,22 +27,24 @@ que son independientes, y por lo tanto su probabilidad es el producto de las $P_
 - El evento "está transmitiendo un usuario cualquiera de entre los $N$, y los demás no" equivale al evento 
 compuesto "transmite $U_1$ y los demás no, o transmite $U_2$ y los demás no, o transmite $U_3$ y los demás no...".
 Como esos eventos elementales son disjuntos, su probabilidad es la suma de las probabilidades individuales.
-- P(esté transmitiendo un usuario cualquiera de entre los $N$, y los demás no) =  
+- P(esté transmitiendo un usuario cualquiera de entre los $N$, y los demás no):
+\begin{equation} 
 $P(U_1 \cap \overline U_2 \cap \overline U_3 \cap \ldots)  +  
 P(\overline U_1 \cap U_2 \cap \overline U_3 \cap \ldots)  +  
 P(\overline U_1 \cap \overline U_2 \cap U_3 \cap \ldots)  + \ldots
-= N \times p \times (1-p) ^ (N-1)$.
-- En el caso anterior, existen exactamente N maneras de elegir el usuario que esté transmitiendo, 
-lo que se refleja en el coeficiente N de las probabilidades. Para analizar el caso donde transmiten $k < N$ usuarios Ui,
-hay muchas maneras de enumerar o elegir esos k usuarios, 
-y el factor que afecta a las probabilidades se expresa en forma de número combinatorio C(N k):
+= N \times p \times (1-p) ^ {N-1}$.
+\end{equation} 
+- En el caso anterior, existen exactamente $N$ maneras de elegir el usuario que esté transmitiendo, 
+lo que se refleja en el coeficiente $N$ de las probabilidades. Para analizar el caso donde transmiten $k < N$ usuarios $U_i$,
+hay muchas maneras de enumerar o elegir esos $k$ usuarios, 
+y el factor que afecta a las probabilidades se expresa en forma de número combinatorio ${N choose k}$:
     - Hay $N!$ permutaciones o maneras de numerar los N usuarios. 
     - De éstas, hay $k!$ maneras, redundantes, de numerar o elegir los k usuarios que transmiten.
     - Por cada una de éstas, existen $(N - k)!$ maneras, redundantes, de numerar los restantes. 
-    - La cantidad de combinaciones es $N! / [k! * (N - k)!] = C(N k)$. Luego P(k Ui transmitan 
-y el resto no) = $C(N k) * p^k * (1-p)^(N-k)$.
-- - P(más de k usuarios) = 1 - P(k o menos usuarios) = 1 - F(k) donde F es la función de distribución 
-o función de probabilidad acumulada usando el cómputo anterior de exactamente k usuarios.
+    - La cantidad de combinaciones es $N! / [k! * (N - k)!] = {N choose k}$. Luego $P(k\ U_i\ transmitan\ 
+y\ el\ resto\ no) = ${N choose k} * p^k * (1-p)^{N-k}$.
+- $P(más\ de\ k\ usuarios) = 1 - P(k\ o\ menos\ usuarios) = 1 - F(k)$ donde $F$ es la función de distribución 
+o función de probabilidad acumulada usando el cómputo anterior de exactamente $k$ usuarios.
 
 ## Ejemplo
 Supongamos un universo de 50 usuarios donde cada uno está 10% del tiempo usando la aplicación. Investiguemos qué pasará 
