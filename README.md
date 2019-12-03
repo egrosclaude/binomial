@@ -47,8 +47,8 @@ con una cota de 10 usuarios.
 - P(U1 ^ ~U2 ^ ~U3 ^ ...) = P * (1-P) * (1-P) * ... = P * (1-P)^(N-1) = 0.1 * 0.9^49 = .00057264
 - P(esté transmitiendo un usuario cualquiera y los demás no) = P(U1 ^ ~U2 ^ ~U3 ^ ...)  +  P(~U1 ^ U2 ^ ~U3 ^ ...)  
 +  P(~U1 ^ ~U2 ^ U3 ^ ...)  +... = N * P * (1-P) ^ (N-1) = 50 * 0.1 * 0.9 ^ 49 =  .02863205
-- P(10 Ui transmitan y el resto no) = (N k) * P^k * (1-P)^(N-k) = C(50 10) * 0.1^10 * 0.9^49 =  
-10272278170 * .000000000000572 = .005875743113240
+- P(10 Ui transmitan y el resto no) = (N k) * P^k * (1-P)^(N-k) = C(50 10) * 0.1^10 * 0.9^40 =  
+10272278170 * .0000000001 * .014780882941 = .015183334116
 - P(más de 10 usuarios) = 1 - P(10 o menos usuarios) = 1 - F(10). F(10) =  .99064539, 
 luego P(más de 10 usuarios) = .00935460
 
