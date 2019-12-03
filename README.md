@@ -1,5 +1,5 @@
 
-# Distribución multinomial
+# Distribución binomial
 
 En el libro de Redes de Kurose se trata estadísticamente el problema de averiguar cuántos de entre <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/> usuarios 
 comparten efectivamente un enlace en un momento dado, conociendo la frecuencia y duración de las ráfagas de actividad de 
