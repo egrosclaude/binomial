@@ -39,7 +39,7 @@ y el factor que afecta a las probabilidades se expresa en forma de número combi
 - De éstas, hay $ k! $ maneras, redundantes, de numerar o elegir los $k$ usuarios que transmiten.
 - Por cada una de éstas, existen $(N - k)!$ maneras, redundantes, de numerar los restantes. 
 - La cantidad de combinaciones es $\frac{N!}{k!  (N - k)!} = {N \choose k}$. Luego $P(k\ U_i\ transmitan\ y\ el\ resto\ no) = {N \choose k} \times  P^k \times (1-P)^{N-k}$.
-- $P(más\ de\ k\ usuarios) = 1 - P(k\ o\ menos\ usuarios) = 1 - F(k)$ donde $F = \sum_k{N \choose k} \times P^k \times (1-P)^{N-k}}$ es la función de distribución 
+- $P(más\ de\ k\ usuarios) = 1 - P(k\ o\ menos\ usuarios) = 1 - F(k)$ donde $F(k) = \sum_{i=0}^k{N \choose i} \times P^i \times (1-P)^{N-i}}$ es la función de distribución 
 o función de probabilidad acumulada usando el cómputo anterior de exactamente $k$ usuarios.
 
 ## Ejemplo
