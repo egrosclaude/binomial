@@ -40,7 +40,7 @@ y el factor que afecta a las probabilidades se expresa en forma de número combi
 - Por cada una de éstas, existen $(N - k)!$ maneras, redundantes, de numerar los restantes. 
 - La cantidad de combinaciones es $\frac{N!}{k!  (N - k)!} = {N \choose k}$. Luego $P(k\ U_i\ transmitan\ y\ el\ resto\ no) = {N \choose k} \times  P^k \times (1-P)^{N-k}$.
 - $P(más\ de\ k\ usuarios) = 1 - P(k\ o\ menos\ usuarios) = 1 - F(k)$ donde $F(k) = \sum_{i=0}^k{N \choose i} \times P^i \times (1-P)^{N-i}}$ es la función de distribución 
-o función de probabilidad acumulada usando el cómputo anterior de exactamente $k$ usuarios.
+o función de probabilidad acumulada usando el cómputo anterior para exactamente $i$ usuarios, con $i$ entre $0$ y $k$. 
 
 ## Ejemplo
 Supongamos un universo de 50 usuarios donde cada uno está 10% del tiempo usando la aplicación. Investiguemos qué pasará 
