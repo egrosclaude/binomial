@@ -6,9 +6,7 @@ comparten efectivamente un enlace en un momento dado, conociendo la frecuencia y
 un usuario. 
 
 El problema tiene otros análogos, como el de calcular la cantidad de licencias concurrentes adecuada para una 
-aplicación de red.
-En este caso se trataría de averiguar cuántos usuarios usarán concurrentemente un servidor, si es que la aplicación 
-tiene noción de sesión. De lo contrario, habrá que calcular la duración promedio de una respuesta y asumirla
+aplicación de red. En este caso se trataría de averiguar cuántos usuarios tendrán sesiones concurrentemente un servidor, si es que la aplicación tiene noción de sesión. De lo contrario, habrá que calcular la duración promedio de una respuesta y asumirla
 como la duración de una sesión virtual. 
 
 Para aplicar el tratamiento de Kurose hay que conocer la frecuencia y duración de las ráfagas de actividad de un usuario, 
@@ -18,7 +16,7 @@ El planteo es como sigue:
 
 
 - La frecuencia $f$ y la duración $d$ promedio de las ráfagas de actividad de un usuario a lo largo de un espacio
-de tiempo $t$ nos dice que la probabilidad de transmitir es $P = \frac{f \times d}{t}$. 
+de tiempo $t$ nos dice que la probabilidad de que ese usuario esté transmitiendo en un momento dado es $P = \frac{f \times d}{t}$. 
 - Llamemos $U1$ al usuario que transmite en un momento dado. Llamemos $p(U1\ esté\ transmitiendo) = p(U1) = P$. Ésta es la 
 probabilidad de éxito en un ensayo de Bernoulli de probabilidad $P$.
 - La probabilidad de que cualquier $U_i$ no transmita en el mismo instante es $p(\overline U_i) = 1-P$.  
