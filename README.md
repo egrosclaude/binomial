@@ -6,11 +6,11 @@ comparten efectivamente un enlace en un momento dado, conociendo la frecuencia y
 un usuario. 
 
 El problema tiene otros análogos, como el de calcular la cantidad de licencias concurrentes adecuada para una 
-aplicación de red. En este caso se trataría de averiguar cuántos usuarios tendrán sesiones concurrentemente un servidor, si es que la aplicación tiene noción de sesión. De lo contrario, habrá que calcular la duración promedio de una respuesta y asumirla
+aplicación de red. En este caso se trataría de averiguar cuántos usuarios mantendrán sesiones con un servidor concurrentemente, si es que la aplicación tiene noción de sesión. De lo contrario, habrá que registrar la duración promedio de una interacción y asumirla
 como la duración de una sesión virtual. 
 
 Para aplicar el tratamiento de Kurose hay que conocer la frecuencia y duración de las ráfagas de actividad de un usuario, 
-y con esos datos determinar la probabilidad de transmitir en un momento dado. 
+y con esos datos determinar su probabilidad de transmitir en un momento dado. 
 
 El planteo es como sigue:
 
