@@ -43,7 +43,7 @@ y el factor que afecta a las probabilidades se expresa en forma de número combi
 o función de probabilidad acumulada usando el cómputo anterior para exactamente $i$ usuarios, con $i$ entre $0$ y $k$. 
 
 ## Valor más probable
-$E(X) = N\timesP$
+$E(X) = N \times P$
 
 ## Ejemplo
 Supongamos un universo de 50 usuarios donde cada uno está 10% del tiempo usando la aplicación.
