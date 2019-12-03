@@ -78,10 +78,12 @@ las modalidades de licencia convenientes.
     14    .998995380100    .001004619900
 
 ## Script
-Se adjunta el script en bc (la calculadora de Unix) que produce la tabla anterior. Modificando el "scale" se obtiene mayor precisión. Con scale=12, para 10 o 12 sesiones ya prácticamente no hay diferencia apreciable.
+Se adjunta el script en bc (la calculadora de Unix) que produce la tabla anterior. Modificando el parámetro `scale` se obtiene mayor precisión. Con scale=12, para 10 o 12 sesiones ya prácticamente no hay diferencia apreciable.
 
     #!/usr/bin/bc -q
     scale=12
+    N = 50
+    f = 0.1
     define fact(x)
     {
              if(x <= 1)
@@ -114,7 +116,7 @@ Se adjunta el script en bc (la calculadora de Unix) que produce la tabla anterio
     print "k, prob de <= k usuarios, prob de > k usuarios trabajando a la vez\n"
     
     for(j=0; j<15; j++) {
-           f = fdistrib(50,j,0.1)
+           f = fdistrib(N,j,f)
            print j,"\t",f,"\t",1-f,"\n"
     }
     
