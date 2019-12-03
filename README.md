@@ -6,9 +6,7 @@ comparten efectivamente un enlace en un momento dado, conociendo la frecuencia y
 un usuario. 
 
 El problema tiene otros análogos, como el de calcular la cantidad de licencias concurrentes adecuada para una 
-aplicación de red.
-En este caso se trataría de averiguar cuántos usuarios usarán concurrentemente un servidor, si es que la aplicación 
-tiene noción de sesión. De lo contrario, habrá que calcular la duración promedio de una respuesta y asumirla
+aplicación de red. En este caso se trataría de averiguar cuántos usuarios tendrán sesiones concurrentemente un servidor, si es que la aplicación tiene noción de sesión. De lo contrario, habrá que calcular la duración promedio de una respuesta y asumirla
 como la duración de una sesión virtual. 
 
 Para aplicar el tratamiento de Kurose hay que conocer la frecuencia y duración de las ráfagas de actividad de un usuario, 
@@ -18,7 +16,7 @@ El planteo es como sigue:
 
 
 - La frecuencia <img src="/tex/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode&sanitize=true" align=middle width=9.81741584999999pt height=22.831056599999986pt/> y la duración <img src="/tex/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55596444999999pt height=22.831056599999986pt/> promedio de las ráfagas de actividad de un usuario a lo largo de un espacio
-de tiempo <img src="/tex/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width=5.936097749999991pt height=20.221802699999984pt/> nos dice que la probabilidad de transmitir es <img src="/tex/102385201bf065a922b14dca0418eb9a.svg?invert_in_darkmode&sanitize=true" align=middle width=61.54396379999998pt height=30.648287999999997pt/>. 
+de tiempo <img src="/tex/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode&sanitize=true" align=middle width=5.936097749999991pt height=20.221802699999984pt/> nos dice que la probabilidad de que ese usuario esté transmitiendo en un momento dado es <img src="/tex/102385201bf065a922b14dca0418eb9a.svg?invert_in_darkmode&sanitize=true" align=middle width=61.54396379999998pt height=30.648287999999997pt/>. 
 - Llamemos <img src="/tex/c9f058676b2164ecfaa2371164ec2323.svg?invert_in_darkmode&sanitize=true" align=middle width=21.23514854999999pt height=22.465723500000017pt/> al usuario que transmite en un momento dado. Llamemos <img src="/tex/7880f301aab6e338254f3b66a91a0c6d.svg?invert_in_darkmode&sanitize=true" align=middle width=286.97431290000003pt height=24.65753399999998pt/>. Ésta es la 
 probabilidad de éxito en un ensayo de Bernoulli de probabilidad <img src="/tex/df5a289587a2f0247a5b97c1e8ac58ca.svg?invert_in_darkmode&sanitize=true" align=middle width=12.83677559999999pt height=22.465723500000017pt/>.
 - La probabilidad de que cualquier <img src="/tex/8ea38e2adf995ba3a8661a5d13c17526.svg?invert_in_darkmode&sanitize=true" align=middle width=15.874636799999989pt height=22.465723500000017pt/> no transmita en el mismo instante es <img src="/tex/4377505b87e846b4ba0d83ead3a52dbb.svg?invert_in_darkmode&sanitize=true" align=middle width=102.6095433pt height=27.725679300000007pt/>.  
