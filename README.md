@@ -40,7 +40,7 @@ y el factor que afecta a las probabilidades se expresa en forma de número combi
 o función de probabilidad acumulada usando el cómputo anterior para exactamente <img src="/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> usuarios, con <img src="/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> entre <img src="/tex/29632a9bf827ce0200454dd32fc3be82.svg?invert_in_darkmode&sanitize=true" align=middle width=8.219209349999991pt height=21.18721440000001pt/> y <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/>. 
 
 ## Valor más probable
-<img src="/tex/cccf3ef5deb30996e70ba4fdd4bc45d6.svg?invert_in_darkmode&sanitize=true" align=middle width=77.69389815pt height=24.65753399999998pt/>
+<img src="/tex/ec2ea3bf7669b63e79c025b7304e51d2.svg?invert_in_darkmode&sanitize=true" align=middle width=110.62184264999998pt height=24.65753399999998pt/>
 
 ## Ejemplo
 Supongamos un universo de 50 usuarios donde cada uno está 10% del tiempo usando la aplicación.
