@@ -1,5 +1,5 @@
 
-# Distribución binomial
+# Distribución multinomial
 
 En el libro de Redes de Kurose se trata estadísticamente el problema de averiguar cuántos de entre <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/> usuarios 
 comparten efectivamente un enlace en un momento dado, conociendo la frecuencia y duración de las ráfagas de actividad de 
@@ -39,14 +39,19 @@ y el factor que afecta a las probabilidades se expresa en forma de número combi
 - <img src="/tex/42074996a1179fc8035a4fc1b29c4509.svg?invert_in_darkmode&sanitize=true" align=middle width=468.92586839999996pt height=24.65753399999998pt/> donde <img src="/tex/d8dcb7668bb188a8cb794f07eaf163bf.svg?invert_in_darkmode&sanitize=true" align=middle width=264.55069575pt height=32.51169900000002pt/> es la función de distribución 
 o función de probabilidad acumulada usando el cómputo anterior para exactamente <img src="/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> usuarios, con <img src="/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> entre <img src="/tex/29632a9bf827ce0200454dd32fc3be82.svg?invert_in_darkmode&sanitize=true" align=middle width=8.219209349999991pt height=21.18721440000001pt/> y <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/>. 
 
+## Valor más probable
+<img src="/tex/cccf3ef5deb30996e70ba4fdd4bc45d6.svg?invert_in_darkmode&sanitize=true" align=middle width=77.69389815pt height=24.65753399999998pt/>
+
 ## Ejemplo
-Supongamos un universo de 50 usuarios donde cada uno está 10% del tiempo usando la aplicación. Investiguemos qué pasará 
-con una cota de 10 usuarios.
+Supongamos un universo de 50 usuarios donde cada uno está 10% del tiempo usando la aplicación.
 - U1 transmite 10% del tiempo implica p(U1 esté transmitiendo) = p(U1) = P = 0.1. 
+- La esperanza o valor más probable es que en un momento dado estén transmitiendo <img src="/tex/7f1e2fa7d9e0bef793f5002298c17fe3.svg?invert_in_darkmode&sanitize=true" align=middle width=87.67109339999999pt height=21.18721440000001pt/> usuarios.
 - Probabilidad de que cualquier Ui no transmita en el mismo instante es p(~Ui) = 1-P = 0.9.
 - P(U1 ^ ~U2 ^ ~U3 ^ ...) = P * (1-P) * (1-P) * ... = P * (1-P)^(N-1) = 0.1 * 0.9^49 = .00057264
 - P(esté transmitiendo un usuario cualquiera y los demás no) = P(U1 ^ ~U2 ^ ~U3 ^ ...)  +  P(~U1 ^ U2 ^ ~U3 ^ ...)  
 +  P(~U1 ^ ~U2 ^ U3 ^ ...)  +... = N * P * (1-P) ^ (N-1) = 50 * 0.1 * 0.9 ^ 49 =  .02863205
+
+Investiguemos qué pasará con una cota de 10 usuarios.
 - P(10 Ui transmitan y el resto no) = (N k) * P^k * (1-P)^(N-k) = C(50 10) * 0.1^10 * 0.9^40 =  
 10272278170 * .0000000001 * .014780882941 = .015183334116
 - P(más de 10 usuarios) = 1 - P(10 o menos usuarios) = 1 - F(10). F(10) =  .99064539, 
