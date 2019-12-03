@@ -1,0 +1,44 @@
+#!/usr/bin/bc -q
+scale=20
+N=50
+f=0.1
+define fact(x)
+{
+         if(x <= 1)
+                 return 1;
+         return x * fact(x-1);
+}
+#fact(3)
+#fact(5)
+#fact(13)
+define comb(n,k)
+{
+         return fact(n) / (fact(k) * fact(n-k));
+}
+#comb(5,1)
+#comb(5,2)
+#comb(13,7)
+define fprob(n,k,p)
+{
+         return comb(n,k) * (p ^ k) * ((1-p) ^ (n-k));
+}
+define fdistrib(n,k,p)
+{
+        suma = 0;
+         for(i=0; i<=k; i++) {
+                 suma += fprob(n,i,p);
+         }
+         return suma;
+}
+
+print "k, prob de <= k usuarios, prob de > k usuarios trabajando a la vez\n"
+
+total = 50
+tasa = 0.1
+for(j=0; j<15; j++) {
+       f = fdistrib(total,j,tasa)
+       print j,"\t",f,"\t",1-f,"\n"
+}
+
+quit
+
