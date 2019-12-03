@@ -1,5 +1,5 @@
 
-# Distribución multinomial
+# Distribución binomial
 
 En el libro de Redes de Kurose se trata estadísticamente el problema de averiguar cuántos de entre $n$ usuarios 
 comparten efectivamente un enlace en un momento dado, conociendo la frecuencia y duración de las ráfagas de actividad de 
