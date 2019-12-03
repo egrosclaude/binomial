@@ -26,7 +26,7 @@ compuesto "transmite <img src="/tex/640168e471c7afd3936ed1814b93f944.svg?invert_
 Como esos eventos elementales son disjuntos, su probabilidad es la suma de las probabilidades individuales.
 - P(esté transmitiendo un usuario cualquiera de entre los <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/>, y los demás no):
 
-<img src="/tex/dea825c5015046f884286843451e3cfa.svg?invert_in_darkmode&sanitize=true" align=middle width=666.5755107pt height=27.725679300000007pt/>.
+<img src="/tex/af38d03f0ff14003ad1f6efc0cd8fb74.svg?invert_in_darkmode&sanitize=true" align=middle width=666.57547275pt height=27.725679300000007pt/>.
 
 - En el caso anterior, existen exactamente <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/> maneras de elegir el usuario que esté transmitiendo, 
 lo que se refleja en el coeficiente <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/> de las probabilidades. Para analizar el caso donde transmiten <img src="/tex/103b826757951fc3932be9bf36ebca34.svg?invert_in_darkmode&sanitize=true" align=middle width=45.99298274999999pt height=22.831056599999986pt/> usuarios <img src="/tex/8ea38e2adf995ba3a8661a5d13c17526.svg?invert_in_darkmode&sanitize=true" align=middle width=15.874636799999989pt height=22.465723500000017pt/>,
@@ -35,7 +35,7 @@ y el factor que afecta a las probabilidades se expresa en forma de número combi
 - Hay <img src="/tex/156410ecc8fc743ca37e28a382050d1d.svg?invert_in_darkmode&sanitize=true" align=middle width=19.566193349999992pt height=22.831056599999986pt/> permutaciones o maneras de numerar los N usuarios. 
 - De éstas, hay <img src="/tex/abdd0ce30ad6a7ae50f468899353b572.svg?invert_in_darkmode&sanitize=true" align=middle width=13.64158619999999pt height=22.831056599999986pt/> maneras, redundantes, de numerar o elegir los <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/> usuarios que transmiten.
 - Por cada una de éstas, existen <img src="/tex/909007d6c99cc418909086ff5ddc3ac2.svg?invert_in_darkmode&sanitize=true" align=middle width=61.51817924999999pt height=24.65753399999998pt/> maneras, redundantes, de numerar los restantes. 
-- La cantidad de combinaciones es <img src="/tex/e539d604cf458f40ceb20c298cf86b22.svg?invert_in_darkmode&sanitize=true" align=middle width=104.77410899999998pt height=30.314440200000025pt/>. Luego <img src="/tex/17b8dc37848c37991543a69c4d9752b7.svg?invert_in_darkmode&sanitize=true" align=middle width=420.02649644999997pt height=30.314440200000025pt/>.
+- La cantidad de combinaciones es <img src="/tex/e539d604cf458f40ceb20c298cf86b22.svg?invert_in_darkmode&sanitize=true" align=middle width=104.77410899999998pt height=30.314440200000025pt/>. Luego <img src="/tex/a524a08bbce1f4f480fc4a303146deca.svg?invert_in_darkmode&sanitize=true" align=middle width=429.1589082pt height=30.314440200000025pt/>.
 - <img src="/tex/42074996a1179fc8035a4fc1b29c4509.svg?invert_in_darkmode&sanitize=true" align=middle width=468.92586839999996pt height=24.65753399999998pt/> donde <img src="/tex/b8bc815b5e9d5177af01fd4d3d3c2f10.svg?invert_in_darkmode&sanitize=true" align=middle width=12.85392569999999pt height=22.465723500000017pt/> es la función de distribución 
 o función de probabilidad acumulada usando el cómputo anterior de exactamente <img src="/tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode&sanitize=true" align=middle width=9.075367949999992pt height=22.831056599999986pt/> usuarios.
 
@@ -47,7 +47,7 @@ con una cota de 10 usuarios.
 - P(U1 ^ ~U2 ^ ~U3 ^ ...) = P * (1-P) * (1-P) * ... = P * (1-P)^(N-1) = 0.1 * 0.9^49 = .00057264
 - P(esté transmitiendo un usuario cualquiera y los demás no) = P(U1 ^ ~U2 ^ ~U3 ^ ...)  +  P(~U1 ^ U2 ^ ~U3 ^ ...)  
 +  P(~U1 ^ ~U2 ^ U3 ^ ...)  +... = N * P * (1-P) ^ (N-1) = 50 * 0.1 * 0.9 ^ 49 =  .02863205
-- P(10 Ui transmitan y el resto no) = (N k) * p^k * (1-p)^(N-k) = C(50 10) * 0.1^10 * 0.9^49 =  
+- P(10 Ui transmitan y el resto no) = (N k) * P^k * (1-P)^(N-k) = C(50 10) * 0.1^10 * 0.9^49 =  
 10272278170 * .000000000000572 = .005875743113240
 - P(más de 10 usuarios) = 1 - P(10 o menos usuarios) = 1 - F(10). F(10) =  .99064539, 
 luego P(más de 10 usuarios) = .00935460
