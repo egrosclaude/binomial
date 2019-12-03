@@ -29,7 +29,7 @@ Como esos eventos elementales son disjuntos, su probabilidad es la suma de las p
 $P(U_1 \cap \overline U_2 \cap \overline U_3 \cap \ldots)  +  
 P(\overline U_1 \cap U_2 \cap \overline U_3 \cap \ldots)  +  
 P(\overline U_1 \cap \overline U_2 \cap U_3 \cap \ldots)  + \ldots
-= N \times p \times (1-p) ^ {N-1}$.
+= N \times P \times (1-P) ^ {N-1}$.
 
 - En el caso anterior, existen exactamente $N$ maneras de elegir el usuario que esté transmitiendo, 
 lo que se refleja en el coeficiente $N$ de las probabilidades. Para analizar el caso donde transmiten $k < N$ usuarios $U_i$,
@@ -38,7 +38,7 @@ y el factor que afecta a las probabilidades se expresa en forma de número combi
 - Hay $ N! $ permutaciones o maneras de numerar los N usuarios. 
 - De éstas, hay $ k! $ maneras, redundantes, de numerar o elegir los $k$ usuarios que transmiten.
 - Por cada una de éstas, existen $(N - k)!$ maneras, redundantes, de numerar los restantes. 
-- La cantidad de combinaciones es $\frac{N!}{k!  (N - k)!} = {N \choose k}$. Luego $P(k\ U_i\ transmitan\ y\ el\ resto\ no) = {N \choose k} * p^k * (1-p)^{N-k}$.
+- La cantidad de combinaciones es $\frac{N!}{k!  (N - k)!} = {N \choose k}$. Luego $P(k\ U_i\ transmitan\ y\ el\ resto\ no) = {N \choose k} * P^k * (1-P)^{N-k}$.
 - $P(más\ de\ k\ usuarios) = 1 - P(k\ o\ menos\ usuarios) = 1 - F(k)$ donde $F$ es la función de distribución 
 o función de probabilidad acumulada usando el cómputo anterior de exactamente $k$ usuarios.
 
@@ -50,7 +50,7 @@ con una cota de 10 usuarios.
 - P(U1 ^ ~U2 ^ ~U3 ^ ...) = P * (1-P) * (1-P) * ... = P * (1-P)^(N-1) = 0.1 * 0.9^49 = .00057264
 - P(esté transmitiendo un usuario cualquiera y los demás no) = P(U1 ^ ~U2 ^ ~U3 ^ ...)  +  P(~U1 ^ U2 ^ ~U3 ^ ...)  
 +  P(~U1 ^ ~U2 ^ U3 ^ ...)  +... = N * P * (1-P) ^ (N-1) = 50 * 0.1 * 0.9 ^ 49 =  .02863205
-- P(10 Ui transmitan y el resto no) = (N k) * p^k * (1-p)^(N-k) = C(50 10) * 0.1^10 * 0.9^49 =  
+- P(10 Ui transmitan y el resto no) = (N k) * P^k * (1-P)^(N-k) = C(50 10) * 0.1^10 * 0.9^49 =  
 10272278170 * .000000000000572 = .005875743113240
 - P(más de 10 usuarios) = 1 - P(10 o menos usuarios) = 1 - F(10). F(10) =  .99064539, 
 luego P(más de 10 usuarios) = .00935460
