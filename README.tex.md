@@ -127,3 +127,6 @@ Se adjunta el script en bc (la calculadora de Unix) que produce la tabla anterio
     
     quit
     
+## Espacio no equiprobable
+Si se puede separar a los usuarios en categorías de uso, con diferentes valores de frecuencia $f$ y duración $d$, a cada categoría se asigna una probabilidad específica. La distribución correspondiente es la multinomial.
+
