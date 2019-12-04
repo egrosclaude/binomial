@@ -124,3 +124,6 @@ Se adjunta el script en bc (la calculadora de Unix) que produce la tabla anterio
     
     quit
     
+## Espacio no equiprobable
+Si se puede separar a los usuarios en categorías de uso, con diferentes valores de frecuencia <img src="/tex/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode&sanitize=true" align=middle width=9.81741584999999pt height=22.831056599999986pt/> y duración <img src="/tex/2103f85b8b1477f430fc407cad462224.svg?invert_in_darkmode&sanitize=true" align=middle width=8.55596444999999pt height=22.831056599999986pt/>, a cada categoría se asigna una probabilidad específica. La distribución correspondiente es la multinomial.
+
