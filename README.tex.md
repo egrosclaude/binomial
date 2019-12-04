@@ -48,14 +48,14 @@ $E(X) = N \times P$
 ## Ejemplo
 Supongamos un universo de 50 usuarios donde cada uno está 10% del tiempo usando la aplicación.
 - U1 transmite 10% del tiempo implica p(U1 esté transmitiendo) = p(U1) = P = 0.1. 
-- La esperanza o valor más probable es que en un momento dado estén transmitiendo $50 \times 0.1 = 5$ usuarios.
+- La esperanza o valor más probable es que en un momento dado estén transmitiendo 50 * 0.1 = 5 usuarios.
 - Probabilidad de que cualquier Ui no transmita en el mismo instante es p(~Ui) = 1-P = 0.9.
 - P(U1 ^ ~U2 ^ ~U3 ^ ...) = P * (1-P) * (1-P) * ... = P * (1-P)^(N-1) = 0.1 * 0.9^49 = .00057264
 - P(esté transmitiendo un usuario cualquiera y los demás no) = P(U1 ^ ~U2 ^ ~U3 ^ ...)  +  P(~U1 ^ U2 ^ ~U3 ^ ...)  
 +  P(~U1 ^ ~U2 ^ U3 ^ ...)  +... = N * P * (1-P) ^ (N-1) = 50 * 0.1 * 0.9 ^ 49 =  .02863205
 
 Investiguemos qué pasará con una cota de 10 usuarios.
-- P(10 Ui transmitan y el resto no) = (N k) * P^k * (1-P)^(N-k) = C(50 10) * 0.1^10 * 0.9^40 =  
+- P(10 Ui transmitan y el resto no) = C(N k) * P^k * (1-P)^(N-k) = C(50 10) * 0.1^10 * 0.9^40 =  
 10272278170 * .0000000001 * .014780882941 = .015183334116
 - P(más de 10 usuarios) = 1 - P(10 o menos usuarios) = 1 - F(10). F(10) =  .99064539, 
 luego P(más de 10 usuarios) = .00935460
